@@ -1,7 +1,8 @@
-package com.sample.materialdesign
+package com.sample.materialdesign.collapsing_toolbar
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.sample.materialdesign.R
 import kotlinx.android.synthetic.main.activity_collapsing_toolbar.*
 
 class CollapsingToolbarActivity : AppCompatActivity() {
@@ -10,10 +11,7 @@ class CollapsingToolbarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collapsing_toolbar)
 
-        val adapter = TestRvAdapter()
 
-        rv_test.adapter = adapter
-
-
+        rv_test.adapter = TestRvAdapter()
     }
 }
