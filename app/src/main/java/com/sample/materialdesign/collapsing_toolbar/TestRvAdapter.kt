@@ -1,5 +1,6 @@
 package com.sample.materialdesign.collapsing_toolbar
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +12,10 @@ class TestRvAdapter : RecyclerView.Adapter<TestRvAdapter.ViewHolder>() {
 
     private val items = mutableListOf<String>()
 
-    init {
-        for (i in 0..19){
-            items.add("$i")
-        }
+    fun replaceAll(items: List<String>){
+        this.items.clear()
+        this.items.addAll(items)
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
