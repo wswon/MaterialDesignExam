@@ -6,4 +6,5 @@
 
     <color name="colorPurple">#9013FE</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTrans">#00000000</color>
 </resources>

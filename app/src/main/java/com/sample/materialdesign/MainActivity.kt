@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.sample.materialdesign.collapsing_toolbar.CollapsingToolbarActivity
+import com.sample.materialdesign.tablayout.TabLayoutActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ll_btn_list.addBtn<CollapsingToolbarActivity>("Collapsing Toolbar")
+        ll_btn_list.run {
+            addBtn<CollapsingToolbarActivity>("Collapsing Toolbar")
+            addBtn<TabLayoutActivity>("TabLayout")
+        }
     }
 
     private inline fun <reified T> ViewGroup.addBtn(btnName: String) {
