@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MaterialDesignExam</string>
+    <string name="month_format">yyyy년 MM월</string>
 </resources>

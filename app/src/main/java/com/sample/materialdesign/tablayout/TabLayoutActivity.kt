@@ -1,8 +1,8 @@
 package com.sample.materialdesign.tablayout
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
@@ -13,7 +13,8 @@ import java.util.*
 
 class TabLayoutActivity : AppCompatActivity() {
 
-    private val titleFormat = SimpleDateFormat("yyyy년 MM월")
+    @SuppressLint("SimpleDateFormat")
+    private val titleFormat = SimpleDateFormat(getString(R.string.month_format))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
